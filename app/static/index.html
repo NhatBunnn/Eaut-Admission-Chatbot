@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tư Vấn Tuyển Sinh AI - Trường Đại Học Công Nghệ Đông Á (EAUT)</title>
+  <meta name="description" content="Chương trình hỏi đáp bằng ngôn ngữ tự nhiên hỗ trợ tuyển sinh năm 2026 cho Trường Đại học Công nghệ Đông Á (EAUT) sử dụng công nghệ RAG và Qwen2.5.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body data-theme="dark">
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+  <div class="ambient-glow glow-center"></div>
+
+  <div class="app-layout">
+    <!-- Top Global Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button id="btnToggleSidebar" class="icon-btn mobile-only" aria-label="Mở menu danh mục">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <div class="university-brand">
+          <div class="brand-crest">
+            <img src="/static/images/bot_avatar.jpg" alt="EAUT Mascot" class="crest-img">
+            <span class="online-indicator"></span>
+          </div>
+          <div class="brand-text">
+            <div class="brand-title">
+              <span class="brand-abbr">EAUT</span>
+              <span class="brand-full">ĐẠI HỌC CÔNG NGHỆ ĐÔNG Á</span>
+            </div>
+            <div class="brand-subtitle">Trợ Lý Tuyển Sinh AI Thông Minh 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-center hide-on-mobile">
+        <div class="badge-status" id="systemStatusBadge">
+          <span class="status-dot ping"></span>
+          <span class="status-text" id="statusText">Đang kết nối hệ thống...</span>
+        </div>
+        <div class="tech-pill">
+          <span class="tech-tag">RAG + Qwen2.5</span>
+          <span class="tech-device" id="devicePill">CUDA</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button id="btnOpenHandbook" class="action-btn handbook-btn" title="Xem Cẩm nang tuyển sinh nhanh">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <span>Cẩm Nang 2026</span>
+        </button>
+
+        <button id="btnToggleSound" class="icon-btn" title="Bật/Tắt âm thanh thông báo" aria-label="Bật/Tắt âm thanh">
+          <svg id="iconSoundOn" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <svg id="iconSoundOff" class="hidden" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+
+        <button id="btnToggleTheme" class="icon-btn" title="Chuyển đổi Sáng / Tối" aria-label="Chuyển đổi giao diện">
+          <svg id="iconSun" class="hidden" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg id="iconMoon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <button id="btnClearChat" class="icon-btn danger" title="Tạo cuộc trò chuyện mới" aria-label="Xóa đoạn chat">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="main-body">
+      <!-- Left Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header mobile-only">
+          <span class="sidebar-title">Danh mục tuyển sinh EAUT</span>
+          <button id="btnCloseSidebar" class="icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+
+        <!-- University Quick Fact Card -->
+        <div class="quick-fact-card">
+          <div class="fact-top">
+            <span class="badge-accent">Mã trường: DDA</span>
+            <span class="badge-year">Khóa 2026</span>
+          </div>
+          <h3 class="fact-heading">Đại Học Công Nghệ Đông Á</h3>
+          <p class="fact-sub">34 Ngành & Chuyên ngành đào tạo ứng dụng thực hành cao.</p>
+          <div class="fact-links">
+            <a href="tel:02462627797" class="contact-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 024.6262.7797</a>
+            <a href="https://eaut.edu.vn" target="_blank" rel="noopener" class="contact-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> eaut.edu.vn</a>
+          </div>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="sidebar-section">
+          <div class="section-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+            <span>Chủ Đề Tra Cứu</span>
+          </div>
+          <div class="category-chips" id="categoryChips">
+            <button class="cat-chip active" data-category="all">Tất cả</button>
+            <button class="cat-chip" data-category="nganh">Ngành đào tạo</button>
+            <button class="cat-chip" data-category="hocphi">Học phí & Bổng</button>
+            <button class="cat-chip" data-category="hoso">Hồ sơ xét tuyển</button>
+            <button class="cat-chip" data-category="thoigian">Lịch 2026</button>
+          </div>
+        </div>
+
+        <!-- Frequently Asked Prompts List -->
+        <div class="sidebar-section prompts-section">
+          <div class="section-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Câu Hỏi Phổ Biến</span>
+          </div>
+          <div class="prompt-list" id="sidebarPromptList">
+            <!-- Dynamic sample questions will be injected here -->
+          </div>
+        </div>
+
+        <!-- System Footnote -->
+        <div class="sidebar-footer">
+          <div class="model-info-box">
+            <div class="info-row">
+              <span class="info-label">Cơ sở dữ liệu RAG:</span>
+              <span class="info-val" id="kbDocCount">184 văn bản</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Mô hình ngôn ngữ:</span>
+              <span class="info-val">Qwen2.5-1.5B (LoRA)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Địa chỉ tuyển sinh:</span>
+              <span class="info-val">Trịnh Văn Bô, Nam Từ Liêm, HN</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Central Chat Interface -->
+      <main class="chat-container">
+        <!-- Scrollable Messages Feed -->
+        <div class="messages-feed" id="messagesFeed">
+          
+          <!-- Welcome Hero View (Shown when no chat yet) -->
+          <div class="welcome-hero" id="welcomeHero">
+            <div class="hero-crest-wrapper">
+              <img src="/static/images/bot_avatar.jpg" alt="EAUT Bot Mascot" class="hero-crest">
+              <div class="hero-glow-ring"></div>
+            </div>
+            <h1 class="hero-title">Chào bạn! Tôi là <span class="text-gradient">EAUT AI Assistant</span></h1>
+            <p class="hero-desc">
+              Trợ lý thông minh hỗ trợ giải đáp mọi thắc mắc về tuyển sinh đại học chính quy năm <strong>2026</strong> của Trường Đại học Công nghệ Đông Á (EAUT): ngành học, phương thức xét tuyển, điểm chuẩn, học phí và học bổng.
+            </p>
+
+            <div class="hero-highlights">
+              <div class="highlight-item">
+                <span class="hl-icon">⚡</span>
+                <span class="hl-text">Phản hồi tức thì bằng RAG</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">📚</span>
+                <span class="hl-text">Trích xuất từ đề án 2026 chuẩn</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🎯</span>
+                <span class="hl-text">Chính xác và minh bạch</span>
+              </div>
+            </div>
+
+            <!-- Quick Cards Grid -->
+            <div class="quick-cards-grid" id="quickCardsGrid">
+              <button class="quick-card" data-prompt="Trường Đại học Công nghệ Đông Á đào tạo những ngành và chuyên ngành nào năm 2026?">
+                <div class="card-icon">🎓</div>
+                <div class="card-body">
+                  <h4>34 Ngành & Chuyên ngành</h4>
+                  <p>CNTT, Bán dẫn, Ô tô, Cơ điện tử, Du lịch, Quản trị...</p>
+                </div>
+              </button>
+
+              <button class="quick-card" data-prompt="Mức học phí các ngành của EAUT là bao nhiêu và có cam kết gì không?">
+                <div class="card-icon">💰</div>
+                <div class="card-body">
+                  <h4>Học phí & Cam kết</h4>
+                  <p>Chi phí từng tín chỉ, học kỳ và chính sách học phí minh bạch</p>
+                </div>
+              </button>
+
+              <button class="quick-card" data-prompt="Trường EAUT có những chính sách học bổng nào cho tân sinh viên 2026?">
+                <div class="card-icon">🎁</div>
+                <div class="card-body">
+                  <h4>Học bổng EAUT 2026</h4>
+                  <p>Học bổng 100%, 50% và học bổng hỗ trợ từ các tập đoàn</p>
+                </div>
+              </button>
+
+              <button class="quick-card" data-prompt="Các phương thức xét tuyển và điều kiện xét học bạ của EAUT năm 2026?">
+                <div class="card-icon">📑</div>
+                <div class="card-body">
+                  <h4>Phương thức & Hồ sơ</h4>
+                  <p>Xét tuyển học bạ, điểm thi THPT, ĐGNL ĐHQGHN, ĐGTD ĐHBK</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Chat messages dynamically rendered here -->
+          <div class="chat-thread" id="chatThread"></div>
+
+          <!-- Loading / Thinking Indicator -->
+          <div class="typing-indicator-box hidden" id="typingIndicator">
+            <div class="typing-avatar">
+              <img src="/static/images/bot_avatar.jpg" alt="Bot avatar">
+            </div>
+            <div class="typing-content">
+              <div class="typing-header">
+                <span class="typing-name">EAUT AI Assistant</span>
+                <span class="typing-action">Đang đối chiếu tài liệu tuyển sinh EAUT...</span>
+              </div>
+              <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Dock -->
+        <footer class="chat-input-dock">
+          <!-- Suggestion Chips Carousel -->
+          <div class="suggestion-chips-bar" id="suggestionChips">
+            <button class="sug-chip" data-prompt="Mã trường và mã ngành CNTT là gì?">Mã trường & CNTT</button>
+            <button class="sug-chip" data-prompt="Thời gian đăng ký nguyện vọng đại học 2026 khi nào?">Thời gian đăng ký NV</button>
+            <button class="sug-chip" data-prompt="Điều kiện xét học bạ vào EAUT?">Điều kiện xét học bạ</button>
+            <button class="sug-chip" data-prompt="Khi nào công bố kết quả đợt 1?">Lịch công bố kết quả</button>
+            <button class="sug-chip" data-prompt="Hotline và địa chỉ trường EAUT ở đâu?">Liên hệ tư vấn</button>
+          </div>
+
+          <div class="input-form-container">
+            <div class="input-wrapper">
+              <textarea 
+                id="messageInput" 
+                rows="1" 
+                placeholder="Nhập câu hỏi về ngành học, học phí, điểm chuẩn EAUT 2026..." 
+                aria-label="Nhập câu hỏi"></textarea>
+
+              <div class="input-tools">
+                <button type="button" id="btnVoiceInput" class="tool-btn" title="Nhập câu hỏi bằng giọng nói">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </button>
+                <button type="button" id="btnSendMessage" class="send-btn" title="Gửi câu hỏi" disabled>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  <span>Gửi</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-disclaimer">
+            <span>Dữ liệu hỏi đáp được cung cấp từ Đề án tuyển sinh chính quy năm 2026 của <strong>Trường Đại học Công nghệ Đông Á (EAUT)</strong>.</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- Admission Handbook Modal -->
+  <div class="modal-backdrop hidden" id="handbookModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon">📖</div>
+          <div>
+            <h3 class="modal-title">Cẩm Nang Tuyển Sinh EAUT 2026</h3>
+            <p class="modal-subtitle">Trường Đại học Công nghệ Đông Á - Mã trường: DDA</p>
+          </div>
+        </div>
+        <button id="btnCloseHandbook" class="icon-btn" aria-label="Đóng cẩm nang">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="modal-tabs">
+        <button class="m-tab active" data-tab="tab-majors">34 Ngành Đào Tạo</button>
+        <button class="m-tab" data-tab="tab-methods">Phương Thức & Hồ Sơ</button>
+        <button class="m-tab" data-tab="tab-tuition">Học Phí & Lộ Trình</button>
+        <button class="m-tab" data-tab="tab-scholarship">Học Bổng 2026</button>
+        <button class="m-tab" data-tab="tab-timeline">Mốc Thời Gian Chuẩn</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="modal-content" id="modalTabContent">
+        <!-- Content will be dynamically rendered via JS -->
+      </div>
+
+      <div class="modal-footer">
+        <span class="modal-hotline">Hotline tuyển sinh: <strong>024.6262.7797</strong> | <strong>0389.898.898</strong></span>
+        <button id="btnCloseHandbookBtn" class="action-btn">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

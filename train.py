@@ -5,6 +5,7 @@ from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
     BitsAndBytesConfig,
+    trainer_utils,
 )
 from peft import LoraConfig
 from trl import SFTTrainer, SFTConfig
@@ -81,6 +82,7 @@ model.config.use_cache = False
 # =========================
 
 def format_example(example):
+
     messages = [
         {
             "role": "user",
@@ -100,7 +102,7 @@ def format_example(example):
 
 
 # =========================
-# 5. LORA
+# 5. LORA CONFIG
 # =========================
 
 peft_config = LoraConfig(
@@ -108,6 +110,7 @@ peft_config = LoraConfig(
     lora_alpha=16,
     lora_dropout=0.05,
     bias="none",
+
     task_type="CAUSAL_LM",
 
     target_modules=[
@@ -127,43 +130,96 @@ peft_config = LoraConfig(
 # =========================
 
 training_args = SFTConfig(
+
+    # -------------------------
+    # Output
+    # -------------------------
+
     output_dir=OUTPUT_DIR,
 
+
+    # -------------------------
     # Training
+    # -------------------------
+
     num_train_epochs=3,
 
     per_device_train_batch_size=1,
+
     per_device_eval_batch_size=1,
 
     gradient_accumulation_steps=8,
 
     learning_rate=2e-4,
 
-    # Sequence length
+
+    # -------------------------
+    # Sequence
+    # -------------------------
+
     max_length=512,
 
+
+    # -------------------------
     # Logging
+    # -------------------------
+
     logging_steps=10,
 
+
+    # -------------------------
     # Evaluation
+    # -------------------------
+
     eval_strategy="steps",
+
     eval_steps=100,
 
-    # Save checkpoint
+
+    # -------------------------
+    # Checkpoint
+    # -------------------------
+
     save_strategy="steps",
+
     save_steps=100,
+
     save_total_limit=2,
 
-    # GPU
-    fp16=True,
 
-    # Memory optimization
+    # -------------------------
+    # GPU
+    # -------------------------
+
+    # Tắt AMP để tránh lỗi:
+    # "_amp_foreach_non_finite_check_and_unscale_cuda"
+    # BFloat16
+
+    fp16=False,
+
+    bf16=False,
+
+    tf32=False,
+
+
+    # -------------------------
+    # Memory
+    # -------------------------
+
     gradient_checkpointing=True,
 
-    # 8-bit optimizer
+
+    # -------------------------
+    # Optimizer
+    # -------------------------
+
     optim="paged_adamw_8bit",
 
-    # Không dùng WandB
+
+    # -------------------------
+    # Logging platform
+    # -------------------------
+
     report_to="none",
 )
 
@@ -175,11 +231,13 @@ training_args = SFTConfig(
 print("\nĐang tạo Trainer...")
 
 trainer = SFTTrainer(
+
     model=model,
 
     args=training_args,
 
     train_dataset=dataset["train"],
+
     eval_dataset=dataset["validation"],
 
     peft_config=peft_config,
@@ -191,20 +249,46 @@ trainer = SFTTrainer(
 
 
 # =========================
-# 8. START TRAINING
+# 8. CHECK CHECKPOINT
+# =========================
+
+last_checkpoint = trainer_utils.get_last_checkpoint(
+    OUTPUT_DIR
+)
+
+
+# =========================
+# 9. START / RESUME TRAINING
 # =========================
 
 print("\n")
 print("==============================")
-print("BẮT ĐẦU TRAIN")
-print("==============================")
-print("\n")
 
-trainer.train()
+if last_checkpoint is not None:
+
+    print("PHÁT HIỆN CHECKPOINT")
+
+    print("==============================")
+
+    print("Tiếp tục từ:")
+
+    print(last_checkpoint)
+
+    trainer.train(
+        resume_from_checkpoint=last_checkpoint
+    )
+
+else:
+
+    print("BẮT ĐẦU TRAIN MỚI")
+
+    print("==============================")
+
+    trainer.train()
 
 
 # =========================
-# 9. SAVE MODEL
+# 10. SAVE MODEL
 # =========================
 
 print("\nĐang lưu model...")
@@ -214,10 +298,17 @@ trainer.save_model(OUTPUT_DIR)
 tokenizer.save_pretrained(OUTPUT_DIR)
 
 
+# =========================
+# DONE
+# =========================
+
 print("\n")
 print("==============================")
 print("TRAIN HOÀN TẤT!")
 print("==============================")
+
 print("Model được lưu tại:")
+
 print(OUTPUT_DIR)
+
 print("==============================")

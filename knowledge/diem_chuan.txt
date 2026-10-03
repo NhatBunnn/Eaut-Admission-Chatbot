@@ -1,0 +1,500 @@
+THÔNG TIN ĐIỂM CHUẨN TUYỂN SINH
+TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐÔNG Á (EAUT)
+
+==================================================
+
+1. THÔNG TIN CHUNG
+   ==================================================
+
+Tên trường:
+Trường Đại học Công nghệ Đông Á
+
+Tên viết tắt:
+EAUT
+
+Mã trường:
+DDA
+
+Năm tuyển sinh:
+2026
+
+Nội dung:
+Điểm chuẩn, điểm trúng tuyển và ngưỡng điểm xét tuyển vào Trường Đại học Công nghệ Đông Á.
+
+LƯU Ý:
+Điểm chuẩn là mức điểm trúng tuyển được công bố chính thức sau khi trường hoàn tất quá trình xét tuyển.
+
+Không được sử dụng điểm chuẩn của năm trước để khẳng định chắc chắn thí sinh sẽ trúng tuyển năm 2026.
+
+Điểm chuẩn có thể thay đổi theo:
+
+* Ngành/chuyên ngành.
+* Phương thức xét tuyển.
+* Tổ hợp xét tuyển.
+* Số lượng thí sinh đăng ký.
+* Chỉ tiêu tuyển sinh.
+* Phổ điểm của thí sinh.
+* Quy định tuyển sinh từng năm.
+
+==================================================
+2. ĐIỂM CHUẨN NĂM 2026
+======================
+
+Tại thời điểm xây dựng dữ liệu, chưa sử dụng một bảng điểm chuẩn 2026 đầy đủ nếu nhà trường chưa công bố chính thức.
+
+Do đó:
+
+* Không tự suy đoán điểm chuẩn 2026.
+* Không lấy điểm chuẩn năm 2025 để gọi là điểm chuẩn năm 2026.
+* Khi nhà trường công bố điểm trúng tuyển chính thức năm 2026, cần cập nhật lại file dữ liệu này.
+* Chatbot phải ưu tiên thông tin mới nhất từ thông báo chính thức của EAUT.
+
+Câu trả lời mẫu:
+
+"Năm 2026, điểm chuẩn chính thức của ngành này cần căn cứ theo thông báo trúng tuyển của Trường Đại học Công nghệ Đông Á. Điểm chuẩn của năm trước chỉ mang tính chất tham khảo và không đảm bảo mức điểm trúng tuyển năm 2026."
+
+==================================================
+3. ĐIỂM CHUẨN THAM KHẢO NĂM 2025
+================================
+
+Điểm chuẩn năm 2025 chỉ được sử dụng với mục đích tham khảo.
+
+Theo thông tin tuyển sinh được EAUT công bố, một số ngành có mức điểm chuẩn năm 2025 theo phương thức xét điểm thi tốt nghiệp THPT.
+
+Ví dụ:
+
+Ngành:
+Công nghệ kỹ thuật Điện – Điện tử
+
+Mã ngành:
+7510301
+
+Phương thức:
+Xét kết quả thi tốt nghiệp THPT.
+
+Điểm chuẩn tham khảo năm 2025:
+18 điểm.
+
+Tổ hợp xét tuyển được công bố:
+A00, A01, A02, A03, A05, A06, A07, A08, A09, A10, A11,
+C01, C02, C03, C14, D01, D07.
+
+LƯU Ý:
+Mức 18 điểm ở trên là điểm chuẩn tham khảo của năm 2025, không phải điểm chuẩn chính thức của năm 2026.
+
+==================================================
+4. Ý NGHĨA CỦA ĐIỂM CHUẨN
+=========================
+
+Điểm chuẩn là mức điểm của thí sinh cuối cùng được xét trúng tuyển vào một ngành/phương thức trong một đợt tuyển sinh cụ thể.
+
+Ví dụ:
+
+Nếu ngành A có điểm chuẩn 18 điểm theo phương thức xét điểm thi tốt nghiệp THPT thì thí sinh có mức điểm xét tuyển đạt 18 điểm hoặc cao hơn có thể nằm trong phạm vi trúng tuyển, tùy quy định cụ thể về chỉ tiêu, đối tượng ưu tiên và các điều kiện khác.
+
+Không được hiểu rằng:
+
+"Điểm chuẩn 18 điểm nghĩa là mọi thí sinh từ 18 điểm trở lên chắc chắn được nhập học."
+
+Thí sinh vẫn phải:
+
+* Đáp ứng điều kiện xét tuyển.
+* Được xác nhận trúng tuyển.
+* Thực hiện các thủ tục xác nhận nhập học theo quy định.
+* Nộp đầy đủ hồ sơ theo yêu cầu.
+
+==================================================
+5. ĐIỂM CHUẨN VÀ ĐIỂM SÀN KHÁC NHAU
+===================================
+
+Điểm sàn:
+Là ngưỡng điểm tối thiểu để thí sinh đủ điều kiện tham gia xét tuyển theo phương thức nhất định.
+
+Điểm chuẩn:
+Là mức điểm trúng tuyển được xác định sau quá trình xét tuyển.
+
+Ví dụ:
+
+Một ngành có ngưỡng điều kiện tối thiểu là 15 điểm.
+
+Điểm chuẩn sau xét tuyển có thể cao hơn mức này.
+
+Vì vậy:
+
+Điểm sàn != Điểm chuẩn.
+
+==================================================
+6. ĐIỂM CHUẨN THEO TỪNG PHƯƠNG THỨC
+===================================
+
+EAUT tuyển sinh năm 2026 bằng nhiều phương thức.
+
+Các phương thức gồm:
+
+1. Xét kết quả học tập THPT/học bạ.
+
+2. Xét kết quả kỳ thi tốt nghiệp THPT năm 2026.
+
+3. Xét kết hợp kết quả học tập THPT và kết quả kỳ thi tốt nghiệp THPT.
+
+4. Xét kết quả các kỳ thi đánh giá năng lực/đánh giá tư duy được nhà trường công bố.
+
+Do đó, điểm xét tuyển của từng phương thức không nên được hiểu là một mức điểm duy nhất áp dụng cho toàn bộ thí sinh.
+
+Khi tư vấn, chatbot phải xác định:
+
+* Thí sinh xét theo phương thức nào.
+* Thí sinh đăng ký ngành nào.
+* Tổ hợp nào.
+* Đối tượng ưu tiên nào nếu có.
+
+==================================================
+7. ĐIỂM CHUẨN XÉT HỌC BẠ
+========================
+
+Năm 2026, việc xét học bạ tại EAUT phải tuân thủ các điều kiện tuyển sinh hiện hành.
+
+Theo thông tin tuyển sinh 2026:
+
+* Kết quả học tập được tính trên 6 học kỳ THPT.
+* Sử dụng tối thiểu 3 môn trong tổ hợp xét tuyển.
+* Tổ hợp phải đáp ứng quy định về môn Toán hoặc Ngữ văn theo quy chế tuyển sinh.
+* Thí sinh sử dụng phương thức xét học bạ phải đáp ứng điều kiện về điểm thi tốt nghiệp THPT theo quy định được công bố.
+
+EAUT công bố điều kiện điểm thi tốt nghiệp THPT tối thiểu:
+15/30 điểm đối với tổ hợp 3 môn dùng làm điều kiện xét học bạ.
+
+Cách hiểu:
+
+Điểm học bạ cao chưa đồng nghĩa chắc chắn trúng tuyển.
+
+Thí sinh phải đáp ứng đồng thời các điều kiện của phương thức xét tuyển.
+
+==================================================
+8. CÁCH TÍNH ĐIỂM THAM KHẢO
+===========================
+
+Đối với phương thức xét học bạ, thông tin EAUT hướng dẫn năm 2026 mô tả cách tính dựa trên điểm của 6 học kỳ và 3 môn trong tổ hợp.
+
+Cách tính khái quát:
+
+Bước 1:
+Lấy điểm của từng môn trong 6 học kỳ.
+
+Bước 2:
+Tính điểm trung bình của từng môn trong 3 năm học.
+
+Bước 3:
+Cộng điểm trung bình của 3 môn trong tổ hợp để tạo điểm xét học bạ.
+
+Ngoài ra, thí sinh có thể được hưởng điểm ưu tiên theo quy định nếu thuộc đối tượng/khu vực được hưởng ưu tiên.
+
+==================================================
+9. ĐIỂM ƯU TIÊN
+===============
+
+Điểm xét tuyển có thể được cộng điểm ưu tiên theo quy định tuyển sinh hiện hành.
+
+Các nhóm ưu tiên có thể bao gồm:
+
+* Ưu tiên khu vực.
+* Ưu tiên đối tượng.
+
+Mức điểm ưu tiên và cách áp dụng phải căn cứ quy chế tuyển sinh hiện hành.
+
+Chatbot không được tự cộng điểm ưu tiên nếu chưa biết:
+
+* Khu vực của thí sinh.
+* Đối tượng ưu tiên của thí sinh.
+* Phương thức xét tuyển.
+* Điểm xét tuyển trước ưu tiên.
+
+==================================================
+10. VÍ DỤ TÍNH ĐIỂM
+===================
+
+Ví dụ 1:
+
+Thí sinh xét ngành X theo tổ hợp A00.
+
+Điểm 3 môn:
+Toán: 7
+Vật lý: 6
+Hóa học: 6
+
+Tổng điểm:
+7 + 6 + 6 = 19 điểm.
+
+Nếu ngành X có điểm chuẩn 18 điểm theo đúng phương thức và tổ hợp tương ứng thì mức 19 điểm cao hơn điểm chuẩn 1 điểm.
+
+Tuy nhiên, chatbot không được kết luận trúng tuyển tuyệt đối nếu chưa kiểm tra đầy đủ điều kiện.
+
+Ví dụ 2:
+
+Thí sinh có tổng điểm 14 điểm.
+
+Nếu phương thức yêu cầu đạt tối thiểu 15/30 điểm để đủ điều kiện sử dụng kết quả thi tốt nghiệp THPT cho xét học bạ thì thí sinh chưa đáp ứng điều kiện này.
+
+Chatbot phải thông báo rõ:
+"Bạn chưa đạt điều kiện điểm tối thiểu của phương thức này."
+
+==================================================
+11. CÁC NGÀNH ĐÀO TẠO CỦA EAUT
+==============================
+
+EAUT tuyển sinh năm 2026 với 34 ngành/chuyên ngành.
+
+Một số ngành tiêu biểu:
+
+1. Công nghệ thông tin
+   Mã ngành: 7480201
+
+2. Công nghệ kỹ thuật Điện – Điện tử
+   Mã ngành: 7510301
+
+3. Công nghệ kỹ thuật Điều khiển và Tự động hóa
+   Mã ngành: 7510303
+
+4. Công nghệ kỹ thuật Ô tô
+   Mã ngành: 7510205
+
+5. Công nghệ Chế tạo máy
+   Mã ngành: 7510202
+
+6. Kỹ thuật Xây dựng
+   Mã ngành: 7580201
+
+7. Công nghệ Thực phẩm
+   Mã ngành: 7540101
+
+8. Kế toán
+   Mã ngành: 7340301
+
+9. Tài chính Ngân hàng
+   Mã ngành: 7340201
+
+10. Công nghệ tài chính
+    Mã ngành: 7340205
+
+11. Quản trị kinh doanh
+    Mã ngành: 7340101
+
+12. Marketing
+    Mã ngành: 7340115
+
+13. Quản trị nhân lực
+    Mã ngành: 7340404
+
+14. Logistics và Quản lý chuỗi cung ứng
+    Mã ngành: 7510605
+
+15. Luật
+    Mã ngành: 7380101
+
+16. Ngôn ngữ Anh
+    Mã ngành: 7220201
+
+17. Ngôn ngữ Trung Quốc
+    Mã ngành: 7220204
+
+18. Ngôn ngữ Hàn Quốc
+    Mã ngành: 7220210
+
+19. Ngôn ngữ Nhật
+    Mã ngành: 7220209
+
+20. Quản trị dịch vụ du lịch và lữ hành
+    Mã ngành: 7810103
+
+21. Quản trị khách sạn
+    Mã ngành: 7810201
+
+22. Dược học
+    Mã ngành: 7720201
+
+23. Điều dưỡng
+    Mã ngành: 7720301
+
+Ngoài ra còn các chuyên ngành như:
+
+* Thiết kế đồ họa số.
+* Trí tuệ nhân tạo ứng dụng.
+* Công nghệ kỹ thuật Bán dẫn.
+* Điện lạnh và điều hòa không khí.
+* Cơ điện tử.
+* Kiến trúc nội thất.
+* Kế toán định hướng ACCA.
+* Quản trị kinh doanh Thời trang.
+
+==================================================
+12. CÁCH TRA CỨU ĐIỂM CHUẨN
+===========================
+
+Khi người dùng hỏi:
+
+"Điểm chuẩn EAUT năm 2026 bao nhiêu?"
+
+Chatbot cần hỏi hoặc xác định:
+
+* Ngành nào?
+* Phương thức nào?
+* Nếu xét điểm thi thì tổ hợp nào?
+
+Sau đó ưu tiên:
+
+1. Thông báo điểm trúng tuyển chính thức của EAUT.
+2. Thông tin tuyển sinh chính thức năm 2026.
+3. Nếu chưa có điểm 2026 thì mới sử dụng điểm năm trước để tham khảo.
+
+==================================================
+13. QUY TẮC TRẢ LỜI CỦA CHATBOT
+===============================
+
+QUY TẮC 1:
+Không được gọi điểm chuẩn năm 2025 là điểm chuẩn năm 2026.
+
+QUY TẮC 2:
+Nếu chưa có điểm chuẩn 2026 chính thức, phải nói rõ:
+"Chưa có dữ liệu điểm chuẩn 2026 chính thức được công bố trong nguồn dữ liệu hiện tại."
+
+QUY TẮC 3:
+Có thể cung cấp điểm chuẩn năm trước để tham khảo nhưng phải ghi rõ năm.
+
+QUY TẮC 4:
+Không đảm bảo thí sinh đỗ chỉ dựa trên điểm chuẩn tham khảo.
+
+QUY TẮC 5:
+Khi tính khả năng trúng tuyển phải kiểm tra:
+
+* Ngành.
+* Mã ngành.
+* Phương thức.
+* Tổ hợp.
+* Điểm xét tuyển.
+* Điểm ưu tiên.
+* Điều kiện đầu vào.
+
+QUY TẮC 6:
+Nếu người dùng hỏi "18 điểm có đỗ EAUT không?", chatbot phải hỏi:
+"Bạn muốn xét ngành nào và theo phương thức nào?"
+
+QUY TẮC 7:
+Nếu người dùng hỏi "điểm chuẩn thấp nhất EAUT là bao nhiêu?", chatbot chỉ được trả lời dựa trên bảng điểm chuẩn chính thức của đúng năm tuyển sinh.
+
+QUY TẮC 8:
+Không tự suy đoán điểm chuẩn dựa trên học phí, chỉ tiêu hoặc điểm chuẩn năm trước.
+
+==================================================
+14. CÁC CÂU HỎI THƯỜNG GẶP
+==========================
+
+Câu hỏi:
+"Điểm chuẩn EAUT 2026 bao nhiêu?"
+
+Trả lời:
+"Điểm chuẩn 2026 cần căn cứ thông báo trúng tuyển chính thức của Trường Đại học Công nghệ Đông Á. Bạn cho mình biết ngành muốn xét, mình sẽ kiểm tra theo đúng ngành và phương thức."
+
+Câu hỏi:
+"Điểm chuẩn EAUT năm 2025 bao nhiêu?"
+
+Trả lời:
+"Điểm chuẩn năm 2025 khác nhau theo từng ngành và phương thức. Ví dụ, ngành Công nghệ kỹ thuật Điện – Điện tử có mức điểm chuẩn tham khảo 18 điểm theo phương thức xét điểm thi tốt nghiệp THPT."
+
+Câu hỏi:
+"18 điểm có đỗ EAUT không?"
+
+Trả lời:
+"Còn tùy ngành và phương thức xét tuyển. Điểm 18 có thể đủ hoặc chưa đủ tùy điểm chuẩn của ngành. Bạn cho mình biết tên ngành và phương thức xét tuyển."
+
+Câu hỏi:
+"Điểm học bạ 20 điểm có đỗ EAUT không?"
+
+Trả lời:
+"Không thể kết luận chỉ dựa vào tổng điểm 20. Cần kiểm tra phương thức xét học bạ, tổ hợp môn, điều kiện điểm thi tốt nghiệp THPT và các điều kiện tuyển sinh năm 2026."
+
+Câu hỏi:
+"Điểm sàn và điểm chuẩn có giống nhau không?"
+
+Trả lời:
+"Không. Điểm sàn là ngưỡng tối thiểu để đủ điều kiện xét tuyển, còn điểm chuẩn là mức điểm trúng tuyển được xác định sau quá trình xét tuyển."
+
+==================================================
+15. LƯU Ý VỀ DỮ LIỆU ĐIỂM CHUẨN
+===============================
+
+Dữ liệu điểm chuẩn là dữ liệu có tính thời điểm.
+
+Khi có thông báo mới từ EAUT:
+
+* Cập nhật điểm chuẩn mới.
+* Ghi rõ năm tuyển sinh.
+* Ghi rõ phương thức.
+* Ghi rõ ngành.
+* Ghi rõ mã ngành.
+* Ghi rõ tổ hợp nếu có.
+* Ghi rõ mức điểm.
+* Không xóa thông tin lịch sử nếu cần phục vụ tham khảo.
+
+Cấu trúc dữ liệu nên sử dụng:
+
+Năm:
+2026
+
+Ngành:
+Tên ngành
+
+Mã ngành:
+Mã ngành
+
+Phương thức:
+Tên phương thức
+
+Tổ hợp:
+Tên tổ hợp
+
+Điểm chuẩn:
+X điểm
+
+Trạng thái:
+Chính thức / Tham khảo
+
+==================================================
+16. THÔNG TIN LIÊN HỆ
+=====================
+
+Trường Đại học Công nghệ Đông Á
+
+Website:
+https://eaut.edu.vn/
+
+Website tuyển sinh:
+https://eaut.edu.vn/
+
+Email tuyển sinh:
+[tuyensinh@eaut.edu.vn](mailto:tuyensinh@eaut.edu.vn)
+
+Điện thoại:
+0243.555.2008
+024.2236.5888
+
+==================================================
+17. NGUỒN DỮ LIỆU
+=================
+
+Nguồn chính:
+Trường Đại học Công nghệ Đông Á (EAUT)
+
+Website:
+https://eaut.edu.vn/
+
+Nguồn tham khảo:
+
+* Thông tin tuyển sinh đại học chính quy năm 2026.
+* Các bài viết tuyển sinh chính thức của EAUT.
+* Thông báo về ngưỡng điểm đảm bảo chất lượng đầu vào và bảng quy đổi điểm tương đương điểm trúng tuyển giữa các phương thức xét tuyển.
+* Các thông tin điểm chuẩn được EAUT công bố theo từng năm.
+
+NGUYÊN TẮC:
+Thông tin chính thức của EAUT được ưu tiên hơn các nguồn bên ngoài.
+
+
